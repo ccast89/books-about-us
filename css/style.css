@@ -326,7 +326,7 @@ footer ul li a{
 
 
 /* MEDIA QUERY MOBILE */
-@media (max-width:320px){
+@media (max-width:425px){
     .grid{
         display: flex;
         flex-direction: column;
