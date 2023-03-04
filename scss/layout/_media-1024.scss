@@ -1,0 +1,17 @@
+@media (max-width:1024px){
+    .grid{
+        display: flex;
+        justify-content: space-evenly;
+    }
+    .nav{
+        display: flex;
+        flex-wrap: wrap;
+        ul{
+            display: flex;
+            flex-wrap: wrap;
+            li{
+                justify-content: space-evenly;
+            }
+        }
+    }
+}

@@ -1,0 +1,34 @@
+main{
+    background-image: url("../assets/imagenes/white-wall.jpg");
+    background-size: 100% 100%;
+    .grid-main-p{
+        @include grid(repeat(3,auto), repeat(4,auto));
+        grid-template-areas:
+        "rainbow rainbow rainbow"
+        ". 1 ."
+        "2 . ."
+        "3 3 3";
+    }
+    .rainbow{
+        grid-area: rainbow;
+        width: 100%;
+        height: 20px;
+        background-color: red;
+    }
+    .titulo{
+        grid-area: 1;
+    }
+    .subtitulo{
+        grid-area: 2;
+    }
+    .tapas{
+        grid-area: 3;
+        display: grid;
+        grid-template-columns: repeat(3, auto);
+        grid-template-rows: 1 auto;
+        gap: 20px;
+        display: flex;
+        justify-content: center;
+        padding: 15px;
+    }
+}

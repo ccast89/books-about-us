@@ -1,0 +1,43 @@
+footer{
+    ul{
+        li{
+            list-style: none;
+            a{
+                text-decoration: none;
+                color: black;
+            }
+        }
+    }
+    .logo{
+        grid-area: logo;
+        width: 80px;
+        height: 80px;
+        border-radius: 50%;
+    }
+}
+.grid-footer{
+    background-color: #7F7C82;
+    padding: 2px;
+    @include grid(repeat(5,auto),1fr);
+    grid-template-areas: 
+    "fot1 . fot2 . fot3";
+    align-items: center;
+    justify-content:space-around;
+}
+.fot-1{
+    grid-area: fot1;
+}
+.fot-2{
+    grid-area: fot2;
+    a{
+        font-family: $fuente-texto;
+        font-size: 12px;
+    }
+}
+.fot-3{
+    grid-area: fot3;
+}
+.icon{
+    width: 40px;
+    height: 40px;
+}

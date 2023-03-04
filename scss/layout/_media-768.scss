@@ -1,0 +1,64 @@
+@media (max-width:768px){
+    .grid{
+        display: flex;
+        justify-content: space-evenly;
+    }
+    .nav{
+    display: flex;
+    flex-wrap: wrap;
+        ul{
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+        }
+    }
+    h1{
+        font-size: 30px;
+    }
+    h2{
+        font-size: 18px;
+    }
+    p{
+        font-size: 15px;
+    }
+    .grid-main{
+        background-image: url("../assets/imagenes/white-wall.jpg");
+        background-size: 100% 100%;
+        display: grid;
+        grid-template-columns: repeat(5,1fr);
+        grid-template-rows: repeat(4,1fr);
+        grid-template-areas: 
+        ". sec1 sec1 sec1 ."
+        "sec2 sec2 sec2 sec2 sec2"
+        ". sec3 sec4 sec5 ."
+        ". sec3 sec4 sec5 .";
+    }
+    .tapas{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        padding: 15px;
+        align-items: center;
+    }
+    .cover{
+        width: 120px;
+        height: 200px;
+    }
+    section iframe{
+        width: 120px;
+        height: 200px;
+    }
+    .icon{
+        width: 30px;
+        height: 30px;
+    }
+    .grid-footer{
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+    }
+    .fot-2 ul{
+        display: flex;
+        gap: 5px;
+    }
+}
