@@ -1,12 +1,9 @@
 body{
     padding: 2px;
     header{
-        // background-image: url("../assets/imagenes/road.jpg");
         background-color: black;
         width: 100%;
         height: 100%;
-        background-size:cover;
-        background-repeat: no-repeat;
         padding: 2px;
         .grid{
             @include grid(repeat(6,1fr),1fr);
