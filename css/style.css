@@ -10,9 +10,11 @@ font-family: 'Noticia Text', serif;
 colors: #F2F1F0 #5C468C
  */
 body {
-  padding: 2px; }
+  padding: 2px;
+  scrollbar-width: thin;
+  scrollbar-color: #B2B2B2; }
   body header {
-    background-color: black;
+    background-color: #20262E;
     width: 100%;
     height: 100%;
     padding: 2px; }
@@ -57,6 +59,13 @@ body {
             background-color: #E9D5DA;
             border-radius: 30%;
             padding: 5px; }
+
+body::-webkit-scrollbar {
+  width: 7px; }
+
+body::-webkit-scrollbar-thumb {
+  background-color: #B2B2B2;
+  border-radius: 20px; }
 
 main h1 {
   font-family: "Noticia Text", serif;
@@ -123,8 +132,7 @@ section iframe {
 .cover {
   width: 200px;
   height: 300px;
-  padding: 2px;
-  border: 1px solid black; }
+  padding: 2px; }
 
 main {
   background-image: url("../assets/imagenes/white-wall.jpg");
@@ -141,12 +149,30 @@ main {
   main .tapas {
     grid-area: 3;
     display: grid;
-    grid-template-columns: repeat(3, auto);
+    grid-template-columns: repeat(3, 1fr);
     grid-template-rows: 1 auto;
     gap: 20px;
     display: flex;
     justify-content: center;
     padding: 15px; }
+  main .card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 5px;
+    width: fit-content;
+    height: 500px;
+    overflow: auto;
+    padding: 10px;
+    border: 1px solid #3E2C41;
+    border-radius: 1%; }
+
+.card::-webkit-scrollbar {
+  width: 7px; }
+
+.card::-webkit-scrollbar-thumb {
+  background-color: #B2B2B2;
+  border-radius: 20px; }
 
 footer ul li {
   list-style: none; }
@@ -161,7 +187,7 @@ footer .logo {
   border-radius: 50%; }
 
 .grid-footer {
-  background-color: #7F7C82;
+  background-color: #B2B2B2;
   padding: 2px;
   display: grid;
   grid-template-columns: repeat(5, auto);
@@ -186,8 +212,140 @@ footer .logo {
   width: 40px;
   height: 40px; }
 
+.card-l ul {
+  width: 200px;
+  height: 90px;
+  border-radius: 4px;
+  background: #B2B2B2;
+  display: flex;
+  gap: 5px;
+  padding: .4em; }
+
+.card-l li {
+  height: 100%;
+  flex: 1;
+  overflow: hidden;
+  cursor: pointer;
+  border-radius: 2px;
+  transition: all .5s;
+  background: #B2B2B2;
+  border: 1px solid #3E2C41;
+  display: flex;
+  justify-content: center;
+  align-items: center; }
+
+.card-l li:hover {
+  flex: 4; }
+
+.card-l a {
+  font-family: "Poppins", sans-serif;
+  font-size: 10px;
+  min-width: 14em;
+  padding: .5em;
+  text-align: center;
+  transform: rotate(-90deg);
+  transition: all .5s;
+  color: black;
+  letter-spacing: .1em; }
+
+.card-l a:hover {
+  transform: rotate(0); }
+
+.card-f {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #e7e7e7;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
+  transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+  overflow: hidden;
+  height: 50px;
+  width: 150px; }
+
+.card-f::before, .card-f::after {
+  position: absolute;
+  display: flex;
+  align-items: center;
+  width: 50%;
+  height: 100%;
+  transition: 0.25s linear;
+  z-index: 1; }
+
+.card-f::before {
+  content: "";
+  left: 0;
+  justify-content: flex-end;
+  background-color: #444444; }
+
+.card-f::after {
+  content: "";
+  right: 0;
+  justify-content: flex-start;
+  background-color: #444444; }
+
+.card-f:hover {
+  box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.22); }
+
+.card-f:hover span {
+  opacity: 0;
+  z-index: -3; }
+
+.card-f:hover::before {
+  opacity: 0.5;
+  transform: translateY(-100%); }
+
+.card-f:hover::after {
+  opacity: 0.5;
+  transform: translateY(100%); }
+
+.card-f span {
+  position: absolute;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 100%;
+  color: whitesmoke;
+  font-family: "Poppins", sans-serif;
+  font-size: 20px;
+  font-weight: 700;
+  opacity: 1;
+  transition: opacity 0.25s;
+  z-index: 2; }
+
+.card-f .social-link {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 25%;
+  height: 100%;
+  color: whitesmoke;
+  font-size: 24px;
+  text-decoration: none;
+  transition: 0.25s; }
+
+.card-f .social-link svg {
+  text-shadow: 1px 1px rgba(31, 74, 121, 0.7);
+  transform: scale(1); }
+
+.card-f .social-link:hover {
+  background-color: rgba(249, 244, 255, 0.774);
+  animation: bounce_613 0.4s linear; }
+
+@keyframes bounce_613 {
+  40% {
+    transform: scale(1.4); }
+  60% {
+    transform: scale(0.8); }
+  80% {
+    transform: scale(1.2); }
+  100% {
+    transform: scale(1); } }
+
 .header-b {
-  background-color: black;
+  background-color: #20262E;
   width: 100%;
   height: 100%; }
 
@@ -220,15 +378,6 @@ main {
   background-color: #F2F1F0;
   border-radius: 20%; }
 
-.boton {
-  background-color: #F2F1F0;
-  font-family: 'Poppins', sans-serif;
-  text-align: justify;
-  padding: 4px;
-  margin: 2px;
-  border-radius: 25%;
-  border: #7F7C82; }
-
 @keyframes dance6123 {
   to {
     background-position: var(--width); } }
@@ -239,6 +388,7 @@ main {
   text-decoration: none;
   color: #1b1b1b;
   padding: 10px 30px;
+  margin: 10px;
   border: 1px solid;
   border-radius: 1000px;
   display: inline-block;
@@ -285,7 +435,12 @@ main {
 @media (max-width: 991px) {
   .nav-item {
     display: flex;
-    justify-content: center; } }
+    justify-content: center; }
+  .card::-webkit-scrollbar:horizontal {
+    width: 5px; }
+  .cover {
+    width: 115px;
+    height: 190px; } }
 
 @media (max-width: 768px) {
   .grid {
@@ -303,26 +458,32 @@ main {
   h2 {
     font-size: 18px; }
   p {
-    font-size: 15px; }
+    font-size: 14px; }
   .grid-main {
     background-image: url("../assets/imagenes/white-wall.jpg");
     background-size: 100% 100%;
     display: grid;
     grid-template-columns: repeat(5, 1fr);
-    grid-template-rows: repeat(4, 1fr);
-    grid-template-areas: ". sec1 sec1 sec1 ." "sec2 sec2 sec2 sec2 sec2" ". sec3 sec4 sec5 ." ". sec3 sec4 sec5 ."; }
+    grid-template-rows: repeat(5, auto);
+    grid-template-areas: "rainbow rainbow rainbow rainbow rainbow" ". sec1 sec1 sec1 ." "sec2 sec2 sec2 sec2 sec2" ". sec3 sec4 sec5 ." ". sec3 sec4 sec5 ."; }
+  .grid-main-p {
+    display: grid;
+    grid-template-columns: 1;
+    grid-template-rows: 4;
+    grid-template-areas: "rainbow" "1" "2" "3 3 3"; }
+  .rainbow {
+    height: 20px; }
   .tapas {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    padding: 15px;
-    align-items: center; }
+    flex-direction: column; }
   .cover {
-    width: 120px;
-    height: 200px; }
+    width: 115px;
+    height: 190px; }
   section iframe {
     width: 120px;
     height: 200px; }
+  .card {
+    height: 30px;
+    padding: 10px; }
   .icon {
     width: 30px;
     height: 30px; }
@@ -365,14 +526,12 @@ main {
     flex-direction: column;
     align-items: center;
     justify-content: center; }
-  .tapas {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    padding: 15px; }
   .cover {
     width: 150px;
     height: 200px; }
+  .card {
+    height: 20px;
+    padding: 10px; }
   section iframe {
     width: 150px;
     height: 200px; }
@@ -387,11 +546,18 @@ main {
     font-family: 'Poppins', sans-serif;
     font-size: 15px; }
   .titulo-c {
-    font-size: 30px; } }
+    font-size: 30px; }
+  .card-l a {
+    font-size: 9.5px; }
+  .card-f {
+    height: 40px;
+    width: 120px; } }
 
 @media (max-width: 320px) {
   main h1 {
     font-size: 35px; }
+  p {
+    font-size: 8.5px; }
   .fot-c a {
     font-size: 13px; }
   .titulo-c {

@@ -3,4 +3,11 @@
         display: flex;
         justify-content: center;
     }
+    .card::-webkit-scrollbar:horizontal {
+        width: 5px;
+    }
+    .cover{
+        width: 115px;
+        height: 190px;
+    }
 }

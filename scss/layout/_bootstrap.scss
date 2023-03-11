@@ -1,5 +1,5 @@
 .header-b{
-    background-color: black;
+    background-color: #20262E;
     width: 100%;
     height: 100%;
 }
@@ -40,15 +40,15 @@ main{
     background-color: #F2F1F0;
     border-radius: 20%;
 }
-.boton{
-    background-color: #F2F1F0;
-    font-family: 'Poppins', sans-serif;
-    text-align: justify;
-    padding: 4px;
-    margin: 2px;
-    border-radius: 25%;
-    border: #7F7C82;
-}
+// .boton{
+//     background-color: #F2F1F0;
+//     font-family: 'Poppins', sans-serif;
+//     text-align: justify;
+//     padding: 4px;
+//     margin: 4px;
+//     border-radius: 25%;
+//     border: #7F7C82;
+// }
 @keyframes dance6123 {
     to {
         background-position: var(--width);
@@ -60,6 +60,7 @@ main{
     text-decoration: none;
     color: rgb(27, 27, 27);
     padding: 10px 30px;
+    margin: 10px;
     border: 1px solid;
     border-radius: 1000px;
     display: inline-block;

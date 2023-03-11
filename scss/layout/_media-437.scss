@@ -41,15 +41,13 @@
         align-items: center;
         justify-content: center;
     }
-    .tapas{
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        padding: 15px;
-    }
     .cover{
         width: 150px;
         height: 200px
+    }
+    .card{
+        height: 20px;
+        padding: 10px;
     }
     section iframe{
         width: 150px;
@@ -70,5 +68,12 @@
     }
     .titulo-c{
         font-size: 30px;
+    }
+    .card-l a {
+        font-size: 9.5px;
+    }
+    .card-f {
+        height: 40px;
+        width: 120px;
     }
 }

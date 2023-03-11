@@ -19,34 +19,46 @@
         font-size: 18px;
     }
     p{
-        font-size: 15px;
+        font-size: 14px;
     }
     .grid-main{
         background-image: url("../assets/imagenes/white-wall.jpg");
         background-size: 100% 100%;
         display: grid;
         grid-template-columns: repeat(5,1fr);
-        grid-template-rows: repeat(4,1fr);
+        grid-template-rows: repeat(5,auto);
         grid-template-areas: 
+        "rainbow rainbow rainbow rainbow rainbow"
         ". sec1 sec1 sec1 ."
         "sec2 sec2 sec2 sec2 sec2"
         ". sec3 sec4 sec5 ."
         ". sec3 sec4 sec5 .";
     }
+    .grid-main-p{
+        @include grid(1, 4);
+        grid-template-areas:
+        "rainbow"
+        "1"
+        "2"
+        "3 3 3";
+    }
+    .rainbow{
+        height: 20px;
+    }
     .tapas{
-        display: flex;
         flex-direction: column;
-        justify-content: center;
-        padding: 15px;
-        align-items: center;
     }
     .cover{
-        width: 120px;
-        height: 200px;
+        width: 115px;
+        height: 190px;
     }
     section iframe{
         width: 120px;
         height: 200px;
+    }
+    .card{
+        height: 30px;
+        padding: 10px;
     }
     .icon{
         width: 30px;
