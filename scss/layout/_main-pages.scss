@@ -1,6 +1,9 @@
 main{
     background-image: url("../assets/imagenes/white-wall.jpg");
     background-size: 100% 100%;
+    p{
+        text-align: justify
+    }
     .grid-main-p{
         @include grid(repeat(3,auto), repeat(4,auto));
         grid-template-areas:

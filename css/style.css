@@ -29,7 +29,8 @@ body {
         grid-area: logo;
         width: 80px;
         height: 80px;
-        border-radius: 50%; }
+        border-radius: 50%;
+        padding: 4px; }
     body header .nav {
       display: grid;
       grid-area: nav;
@@ -69,16 +70,20 @@ body::-webkit-scrollbar-thumb {
 
 main h1 {
   font-family: "Noticia Text", serif;
-  font-size: 50px;
+  font-size: 60px;
   display: flex;
-  justify-content: center; }
+  justify-content: center;
+  text-align: center; }
 
 main p {
   font-family: "Poppins", sans-serif;
-  text-align: justify; }
+  text-align: center; }
 
 main h2 {
-  font-family: "Poppins", sans-serif; }
+  font-family: "Poppins", sans-serif;
+  font-size: 22px;
+  text-align: justify;
+  padding: 2px; }
 
 .grid-main {
   width: 100%;
@@ -127,16 +132,20 @@ section iframe {
   width: 200px;
   height: 300px;
   padding: 2px;
-  border: 1px solid black; }
+  border: 1px solid black;
+  box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px; }
 
 .cover {
   width: 200px;
   height: 300px;
-  padding: 2px; }
+  padding: 2px;
+  box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px; }
 
 main {
   background-image: url("../assets/imagenes/white-wall.jpg");
   background-size: 100% 100%; }
+  main p {
+    text-align: justify; }
   main .grid-main-p {
     display: grid;
     grid-template-columns: repeat(3, auto);
@@ -439,8 +448,11 @@ main {
   .card::-webkit-scrollbar:horizontal {
     width: 5px; }
   .cover {
-    width: 115px;
-    height: 190px; } }
+    width: 125px;
+    height: 200px; }
+  section iframe {
+    width: 125px;
+    height: 200px; } }
 
 @media (max-width: 768px) {
   .grid {
@@ -479,8 +491,8 @@ main {
     width: 115px;
     height: 190px; }
   section iframe {
-    width: 120px;
-    height: 200px; }
+    width: 115px;
+    height: 190px; }
   .card {
     height: 30px;
     padding: 10px; }
@@ -513,9 +525,9 @@ main {
       width: 30px;
       height: 30px; }
   h1 {
-    font-size: 22px; }
+    font-size: 20px; }
   h2 {
-    font-size: 15px; }
+    font-size: 14px; }
   p {
     font-size: 10px; }
   .grid-main {
@@ -528,7 +540,10 @@ main {
     justify-content: center; }
   .cover {
     width: 150px;
-    height: 200px; }
+    height: 215px; }
+  section iframe {
+    width: 150px;
+    height: 215px; }
   .card {
     height: 20px;
     padding: 10px; }
@@ -556,9 +571,17 @@ main {
 @media (max-width: 320px) {
   main h1 {
     font-size: 35px; }
+  main h2 {
+    font-size: 13px; }
   p {
     font-size: 8.5px; }
-  .fot-c a {
-    font-size: 13px; }
-  .titulo-c {
-    font-size: 30px; } }
+  .cover {
+    width: 100px;
+    height: 150px; }
+  section iframe {
+    width: 100px;
+    height: 150px; }
+    section iframe .fot-c a {
+      font-size: 13px; }
+    section iframe .titulo-c {
+      font-size: 30px; } }
