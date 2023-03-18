@@ -2,43 +2,57 @@ main{
     background-image: url("../assets/imagenes/white-wall.jpg");
     background-size: 100% 100%;
     p{
-        text-align: justify
+        text-align: justify;
     }
     .grid-main-p{
         @include grid(repeat(3,auto), repeat(4,auto));
         grid-template-areas:
         "rainbow rainbow rainbow"
-        ". 1 ."
+        "1 1 1"
         "2 . ."
         "3 3 3";
     }
     .titulo{
         grid-area: 1;
+        color: white;
+        p{ 
+            align-items: center;
+            justify-content:baseline;
+            text-align: center;
+            font-size: 23px;
+            background-color: rgba($color: #000000, $alpha: 0.5);
+        }
     }
     .subtitulo{
         grid-area: 2;
     }
-    .tapas{
-        grid-area: 3;
-        display: grid;
-        grid-template-columns: repeat(3, 1fr);
-        grid-template-rows: 1 auto;
-        gap: 20px;
-        display: flex;
-        justify-content: center;
-        padding: 15px;
-    }
-    .card{
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        gap: 15px;
-        width: fit-content;
-        height: 500px;
-        overflow: auto;
-        padding: 10px;
-        border: 1px solid #3E2C41;
-        border-radius: 1%;
+    .banner{
+    background-image: url("../assets/imagenes/mujeres.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    height: 400px;
+}
+.tapas{
+    grid-area: 3;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: 1 auto;
+    gap: 20px;
+    display: flex;
+    justify-content: center;
+    padding: 15px;
+}
+.card{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 15px;
+    width: fit-content;
+    height: 500px;
+    overflow: auto;
+    padding: 10px;
+    border: 1px solid #3E2C41;
+    border-radius: 1%;
     }
 }
 .card::-webkit-scrollbar{

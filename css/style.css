@@ -11,7 +11,8 @@ colors: #F2F1F0 #5C468C
  */
 body {
   scrollbar-width: thin;
-  scrollbar-color: #B2B2B2; }
+  scrollbar-color: #B2B2B2;
+  height: 100%; }
   body header {
     background-color: #20262E;
     width: 100%;
@@ -92,7 +93,7 @@ main h2 {
   display: grid;
   grid-template-columns: repeat(7, auto);
   grid-template-rows: repeat(4, auto);
-  grid-template-areas: "rainbow rainbow rainbow rainbow rainbow rainbow rainbow"  ".  . sec1 sec1 sec1 . ." "sec2 sec2 sec2 sec2 sec2 sec2 sec2" ". sec3 . sec4 . sec5 ."; }
+  grid-template-areas: "rainbow rainbow rainbow rainbow rainbow rainbow rainbow"  "sec1  sec1 sec1 sec1 sec1 sec1 sec1" "sec2 sec2 sec2 sec2 sec2 sec2 sec2" ". sec3 . sec4 . sec5 ."; }
 
 .rainbow {
   grid-area: rainbow;
@@ -149,11 +150,23 @@ main {
     display: grid;
     grid-template-columns: repeat(3, auto);
     grid-template-rows: repeat(4, auto);
-    grid-template-areas: "rainbow rainbow rainbow" ". 1 ." "2 . ." "3 3 3"; }
+    grid-template-areas: "rainbow rainbow rainbow" "1 1 1" "2 . ." "3 3 3"; }
   main .titulo {
-    grid-area: 1; }
+    grid-area: 1;
+    color: white; }
+    main .titulo p {
+      align-items: center;
+      justify-content: baseline;
+      text-align: center;
+      font-size: 23px;
+      background-color: rgba(0, 0, 0, 0.5); }
   main .subtitulo {
     grid-area: 2; }
+  main .banner {
+    background-image: url("../assets/imagenes/mujeres.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    height: 400px; }
   main .tapas {
     grid-area: 3;
     display: grid;
@@ -377,10 +390,6 @@ nav ul li a {
     padding: 5px;
     width: 40px;
     height: 40px; }
-
-main {
-  background-image: url("../assets/imagenes/white-wall.jpg");
-  background-size: 100% 100%; }
 
 .toggler-c {
   background-color: #F2F1F0;
