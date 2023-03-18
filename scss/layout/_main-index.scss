@@ -8,12 +8,6 @@ main{
         justify-content: center;
         text-align: center;
         align-self: center;
-        background-image: url('../assets/imagenes/lgbtq.jpg');
-        background-size: cover;
-        background-repeat: no-repeat;
-        height: 400px;
-        // background-color: rgba($color: #000000, $alpha: 0.2);
-        border-radius: 1.5%;
     }
     p{
         font-family: $fuente-texto;
@@ -21,7 +15,7 @@ main{
     }
     h2{
         font-family: $fuente-texto;
-        font-size: 14px;
+        font-size: 20px;
         text-align:justify;
         padding: 2px;
     }
@@ -38,17 +32,25 @@ main{
         padding-bottom: 20px;
     }
 }
+.bg-h1{
+    background-image: url('../assets/imagenes/lgbtq.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    height: 400px;
+}
 .grid-main{
     width: 100%;
     gap:15px 10px;
-    @include grid(repeat(2,auto),repeat(4,auto));
+    grid-template-columns: 3,1fr;
+    grid-template-rows: 7, auto;
     grid-template-areas:
-    "rainbow rainbow" 
-    "sec1 sec1"
-    "sec2 sec2"
-    "div1 div1"
-    "sec3 sec4"
-    "sec5 sec6";
+    "rainbow rainbow"
+    ". sec1 ."
+    ". sec2 ."
+    ". sec3 ."
+    ". sec4 ."
+    ". sec5 ."
+    ". sec6 .";
 }
 .rainbow{
     grid-area: rainbow;
@@ -69,6 +71,7 @@ main{
     padding: 5px;
     display: flex;
     flex-direction: column;
+    box-shadow: rgb(38, 57, 77) 0px 20px 30px -10px;
     a{
         display: flex;
         flex-direction: row;
@@ -87,7 +90,8 @@ section::-webkit-scrollbar-thumb{
 }
 .carrousel{
     display: flex;
-    max-width: 275%;
+    justify-content: center;
+    max-width: 700px;
     height: 300px;
     width: 100%;
     overflow-x: scroll;
@@ -102,14 +106,39 @@ section::-webkit-scrollbar-thumb{
 .sec-4{
     grid-area: sec4;
     padding: 5px;
+    display: flex;
+    flex-direction: column;
+    box-shadow: rgb(38, 57, 77) 0px 20px 30px -10px;
+    a{
+        display: flex;
+        flex-direction: row;
+        text-decoration: none;
+    }
 }
+
 .sec-5{
     grid-area: sec5;
     padding: 5px;
+    display: flex;
+    flex-direction: column;
+    box-shadow: rgb(38, 57, 77) 0px 20px 30px -10px;
+    a{
+        display: flex;
+        flex-direction: row;
+        text-decoration: none;
+    }
 }
 .sec-6{
     grid-area: sec6;
     padding: 5px;
+    display: flex;
+    flex-direction: column;
+    box-shadow: rgb(38, 57, 77) 0px 20px 30px -10px;
+    a{
+        display: flex;
+        flex-direction: row;
+        text-decoration: none;
+    }
 }
 section img:hover{
     opacity: 2;
