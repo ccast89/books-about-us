@@ -16,7 +16,7 @@ footer{
     }
 }
 .grid-footer{
-    background-color: #B2B2B2;
+    background-color: #066163;
     padding: 2px;
     @include grid(repeat(5,auto),1fr);
     grid-template-areas: 
@@ -47,7 +47,7 @@ footer{
     width: 200px;
     height: 90px;
     border-radius: 4px;
-    background: #B2B2B2;
+    background: #066163;
     display: flex;
     gap: 5px;
     padding: .4em;
@@ -59,7 +59,7 @@ footer{
     cursor: pointer;
     border-radius: 2px;
     transition: all .5s;
-    background: #B2B2B2;
+    background: #066163;
     border: 1px solid #3E2C41;
     display: flex;
     justify-content: center;
@@ -109,13 +109,13 @@ footer{
     content: "";
     left: 0;
     justify-content: flex-end;
-    background-color: #444444;
+    background-color: #383838;
 }
 .card-f::after {
     content: "";
     right: 0;
     justify-content: flex-start;
-    background-color: #444444;
+    background-color: #383838;
 }
 .card-f:hover {
     box-shadow: 0 14px 28px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.22);
