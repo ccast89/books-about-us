@@ -99,10 +99,10 @@ main {
   justify-content: center;
   align-items: center;
   margin: auto;
-  margin-bottom: 25px;
+  margin-top: 25px;
   padding: 5px;
   max-width: 1000px;
-  width: 100%;
+  width: 95%;
   height: 300px;
   overflow-x: scroll;
   scroll-snap-type: x mandatory;
@@ -111,49 +111,15 @@ main {
   .carrousel img {
     width: 100%;
     object-fit: cover;
-    scroll-snap-align: center; }
+    scroll-snap-align: center;
+    padding: 5px; }
   .carrousel a {
     display: flex;
     flex-direction: row;
     text-decoration: none; }
 
 .carrousel img:hover {
-  transform: scale(1.2); }
-
-.sec-4 {
-  padding: 5px;
-  display: flex;
-  margin: auto;
-  flex-direction: column;
-  box-shadow: #26394d 0px 20px 30px -10px; }
-  .sec-4 a {
-    display: flex;
-    flex-direction: row;
-    text-decoration: none; }
-
-.sec-5 {
-  padding: 5px;
-  display: flex;
-  flex-direction: column;
-  margin: auto;
-  box-shadow: #26394d 0px 20px 30px -10px; }
-  .sec-5 a {
-    display: flex;
-    flex-direction: row;
-    text-decoration: none; }
-
-.sec-6 {
-  padding: 5px;
-  margin: auto;
-  display: flex;
-  flex-direction: column;
-  box-shadow: #26394d 0px 20px 30px -10px; }
-  .sec-6 a {
-    display: flex;
-    flex-direction: row;
-    text-decoration: none; }
-
-section img:hover {
+  transform: scale(1.2);
   opacity: 2;
   filter: contrast(120%); }
 
@@ -310,7 +276,7 @@ footer .logo {
   width: 40px;
   height: 40px; }
 
-.card-l ul {
+.list-footer ul {
   width: 200px;
   height: 90px;
   border-radius: 4px;
@@ -319,7 +285,7 @@ footer .logo {
   gap: 5px;
   padding: .4em; }
 
-.card-l li {
+.list-footer li {
   height: 100%;
   flex: 1;
   overflow: hidden;
@@ -332,12 +298,12 @@ footer .logo {
   justify-content: center;
   align-items: center; }
 
-.card-l li:hover {
+.list-footer li:hover {
   flex: 4; }
 
-.card-l a {
+.list-footer a {
   font-family: "Poppins", sans-serif;
-  font-size: 10px;
+  font-size: 12px;
   min-width: 14em;
   padding: .5em;
   text-align: center;
@@ -346,10 +312,10 @@ footer .logo {
   color: black;
   letter-spacing: .1em; }
 
-.card-l a:hover {
+.list-footer a:hover {
   transform: rotate(0); }
 
-.card-f {
+.social {
   position: relative;
   display: flex;
   align-items: center;
@@ -359,9 +325,9 @@ footer .logo {
   transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
   overflow: hidden;
   height: 50px;
-  width: 150px; }
+  width: 140px; }
 
-.card-f::before, .card-f::after {
+.social::before, .social::after {
   position: absolute;
   display: flex;
   align-items: center;
@@ -370,34 +336,34 @@ footer .logo {
   transition: 0.25s linear;
   z-index: 1; }
 
-.card-f::before {
+.social::before {
   content: "";
   left: 0;
   justify-content: flex-end;
   background-color: #383838; }
 
-.card-f::after {
+.social::after {
   content: "";
   right: 0;
   justify-content: flex-start;
   background-color: #383838; }
 
-.card-f:hover {
+.social:hover {
   box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.22); }
 
-.card-f:hover span {
+.social:hover span {
   opacity: 0;
   z-index: -3; }
 
-.card-f:hover::before {
+.social:hover::before {
   opacity: 0.5;
   transform: translateY(-100%); }
 
-.card-f:hover::after {
+.social:hover::after {
   opacity: 0.5;
   transform: translateY(100%); }
 
-.card-f span {
+.social span {
   position: absolute;
   display: flex;
   align-items: center;
@@ -406,13 +372,13 @@ footer .logo {
   height: 100%;
   color: whitesmoke;
   font-family: "Poppins", sans-serif;
-  font-size: 20px;
+  font-size: 18px;
   font-weight: 700;
   opacity: 1;
   transition: opacity 0.25s;
   z-index: 2; }
 
-.card-f .social-link {
+.social .social-link {
   position: relative;
   display: flex;
   align-items: center;
@@ -424,11 +390,11 @@ footer .logo {
   text-decoration: none;
   transition: 0.25s; }
 
-.card-f .social-link svg {
+.social .social-link svg {
   text-shadow: 1px 1px rgba(31, 74, 121, 0.7);
   transform: scale(1); }
 
-.card-f .social-link:hover {
+.social .social-link:hover {
   background-color: rgba(249, 244, 255, 0.774);
   animation: bounce_613 0.4s linear; }
 
@@ -442,15 +408,20 @@ footer .logo {
   100% {
     transform: scale(1); } }
 
+@media (max-width: 1024px) {
+  .carrouser {
+    width: 80%;
+    height: 200px; } }
+
 @media (max-width: 768px) {
   nav .menu {
     width: 100%;
     height: 0;
     overflow: hidden; }
-  nav ul {
-    flex-direction: column;
-    align-items: center;
-    padding: 0.5rem 0; }
+    nav .menu ul {
+      flex-direction: column;
+      align-items: center;
+      padding: 0.5rem 0; }
   nav label {
     display: inline-flex;
     color: #F2F1F0; }
@@ -459,6 +430,41 @@ footer .logo {
   h1 {
     font-size: 30px; }
   h2 {
-    font-size: 18px; }
+    font-size: 16px; }
   p {
-    font-size: 14px; } }
+    font-size: 14px; }
+  .banner-index {
+    background-size: 100% 100%;
+    height: 300px;
+    padding: 2px; }
+  .carrousel {
+    width: 90%;
+    height: 250px; }
+  .cover {
+    width: 100px;
+    height: 120px;
+    padding: 0.5px; }
+  .icon {
+    width: 30px;
+    height: 30px; } }
+
+@media (max-width: 445px) {
+  main h1 {
+    font-size: 45px; }
+  main h2 {
+    font-size: 15px; }
+  main h3 {
+    font-size: 20px; }
+  .banner-index {
+    background-size: 100% 100%;
+    height: 200px;
+    padding: 2px; }
+  .grid-footer {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly; }
+  .fot-2 a {
+    font-family: 'Poppins', sans-serif;
+    font-size: 15px; }
+  .list-footer a {
+    font-size: 9.5px; } }

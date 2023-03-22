@@ -43,7 +43,7 @@ footer{
 }
 
 // ANIMACIONES
-.card-l ul {
+.list-footer ul {
     width: 200px;
     height: 90px;
     border-radius: 4px;
@@ -52,7 +52,7 @@ footer{
     gap: 5px;
     padding: .4em;
 }
-.card-l li {
+.list-footer li {
     height: 100%;
     flex: 1;
     overflow: hidden;
@@ -65,13 +65,13 @@ footer{
     justify-content: center;
     align-items: center;
 }  
-.card-l li:hover {
+.list-footer li:hover {
     flex: 4;
 }
 
-.card-l a {
+.list-footer a {
     font-family: $fuente-texto;
-    font-size: 10px;
+    font-size: 12px;
     min-width: 14em;
     padding: .5em;
     text-align: center;
@@ -80,11 +80,11 @@ footer{
     color: black;
     letter-spacing: .1em;
 }
-.card-l a:hover {
+.list-footer a:hover {
     transform: rotate(0);
 }
 
-.card-f {
+.social {
     position: relative;
     display: flex;
     align-items: center;
@@ -94,9 +94,9 @@ footer{
     transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
     overflow: hidden;
     height: 50px;
-    width: 150px;
+    width: 140px;
 }
-.card-f::before, .card-f::after {
+.social::before, .social::after {
     position: absolute;
     display: flex;
     align-items: center;
@@ -105,34 +105,34 @@ footer{
     transition: 0.25s linear;
     z-index: 1;
 }
-.card-f::before {
+.social::before {
     content: "";
     left: 0;
     justify-content: flex-end;
     background-color: #383838;
 }
-.card-f::after {
+.social::after {
     content: "";
     right: 0;
     justify-content: flex-start;
     background-color: #383838;
 }
-.card-f:hover {
+.social:hover {
     box-shadow: 0 14px 28px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.22);
 }
-.card-f:hover span {
+.social:hover span {
     opacity: 0;
     z-index: -3;
 }
-.card-f:hover::before {
+.social:hover::before {
     opacity: 0.5;
     transform: translateY(-100%);
 }
-.card-f:hover::after {
+.social:hover::after {
     opacity: 0.5;
     transform: translateY(100%);
 }
-.card-f span {
+.social span {
     position: absolute;
     display: flex;
     align-items: center;
@@ -141,14 +141,14 @@ footer{
     height: 100%;
     color: whitesmoke;
     font-family: $fuente-texto;
-    font-size: 20px;
+    font-size: 18px;
     font-weight: 700;
     opacity: 1;
     transition: opacity 0.25s;
     z-index: 2;
 }
 
-.card-f .social-link {
+.social .social-link {
     position: relative;
     display: flex;
     align-items: center;
@@ -161,12 +161,12 @@ footer{
     transition: 0.25s;
 }
 
-.card-f .social-link svg {
+.social .social-link svg {
     text-shadow: 1px 1px rgba(31, 74, 121, 0.7);
     transform: scale(1);
 }
 
-.card-f .social-link:hover {
+.social .social-link:hover {
     background-color: rgba(249, 244, 255, 0.774);
     animation: bounce_613 0.4s linear;
 }

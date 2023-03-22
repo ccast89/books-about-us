@@ -3,91 +3,44 @@
         width: 100%;
         height: 0;
         overflow: hidden;
-    }
-    nav ul{
-        flex-direction: column;
-        align-items: center;
-        padding: 0.5rem 0;
+        ul{
+            flex-direction: column;
+            align-items: center;
+            padding: 0.5rem 0;
+        }
     }
     nav label{
         display: inline-flex;
-        color: #F2F1F0;
+    color: #F2F1F0;
     }
     nav #toggle:checked ~.menu{
         height: 100%;
     }
-    // .grid{
-    //     display: flex;
-    //     justify-content: space-evenly;
-    // }
-    // .nav{
-    // display: flex;
-    // flex-wrap: wrap;
-    //     ul{
-    //         display: flex;
-    //         flex-wrap: wrap;
-    //         gap: 10px;
-    //     }
-    // }
     h1{
         font-size: 30px;
     }
     h2{
-        font-size: 18px;
+        font-size: 16px;
     }
     p{
         font-size: 14px;
     }
-    // .grid-main{
-    //     // background-image: url("../assets/imagenes/white-wall.jpg");
-    //     // background-size: 100% 100%;
-    //     display: grid;
-    //     grid-template-columns: repeat(5,1fr);
-    //     grid-template-rows: repeat(5,auto);
-    //     grid-template-areas: 
-    //     "rainbow rainbow rainbow rainbow rainbow"
-    //     ". sec1 sec1 sec1 ."
-    //     "sec2 sec2 sec2 sec2 sec2"
-    //     ". sec3 sec4 sec5 ."
-    //     ". sec3 sec4 sec5 .";
-    // }
-    // .grid-main-p{
-    //     @include grid(1, 4);
-    //     grid-template-areas:
-    //     "rainbow"
-    //     "1"
-    //     "2"
-    //     "3 3 3";
-    // }
-    // .rainbow{
-    //     height: 20px;
-    // }
-    // .tapas{
-    //     flex-direction: column;
-    // }
-    // .cover{
-    //     width: 115px;
-    //     height: 190px;
-    // }
-    // section iframe{
-    //     width: 115px;
-    //     height: 190px;
-    // }
-    // .card{
-    //     height: 30px;
-    //     padding: 10px;
-    // }
-    // .icon{
-    //     width: 30px;
-    //     height: 30px;
-    // }
-    // .grid-footer{
-    //     display: flex;
-    //     flex-direction: row;
-    //     justify-content: space-around;
-    // }
-    // .fot-2 ul{
-    //     display: flex;
-    //     gap: 5px;
-    // }
+    .banner-index{
+        background-size: 100% 100%;
+        height: 300px;
+        padding: 2px;
+        }
+    .carrousel{
+        width: 90%;
+        height: 250px;
+    }
+    .cover{
+    width: 100px;
+    height: 120px;
+    padding: 0.5px;
+    }
+    .icon{
+        width: 30px;
+        height: 30px;
+    }
 }
