@@ -16,13 +16,13 @@ footer{
     }
 }
 .grid-footer{
-    background-color: #066163;
+    background-color: $background-footer;
     padding: 2px;
     @include grid(repeat(5,auto),1fr);
     grid-template-areas: 
     "fot1 . fot2 . fot3";
     align-items: center;
-    justify-content:space-around;
+    justify-content:space-between;
 }
 .fot-1{
     grid-area: fot1;
@@ -86,9 +86,7 @@ footer{
 
 .social {
     position: relative;
-    display: flex;
-    align-items: center;
-    justify-content: center;
+    @include flex(none, center, center, none, none);
     background: #e7e7e7;
     box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
     transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);

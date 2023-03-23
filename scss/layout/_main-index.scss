@@ -1,5 +1,5 @@
 main{
-    background-color: #F2F2F2;
+    background-color: $background-main;
     h1{
         font-family: $fuente-titulos;
         font-size: 60px;
@@ -48,9 +48,7 @@ main{
     row-gap: 15px;
 }
 .carrousel{
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    @include flex(none, center, center, none, none);
     margin: auto;
     margin-top: 25px;
     padding: 5px;
@@ -61,6 +59,9 @@ main{
     scroll-snap-type: x mandatory;
     box-shadow: rgb(38, 57, 77) 0px 20px 30px -10px;
     border-radius: 9px;
+        h4{
+            text-align: center;
+        }
         img{
         width: 100%;
         object-fit: cover;
