@@ -25,9 +25,10 @@ main{
     }
     h4{
         font-family: $fuente-texto;
-        font-size: 18px;
+        font-size: 22px;
         text-align: center;
         padding-bottom: 20px;
+        margin-top: 50px;
     }
 }
 .banner-index{
@@ -45,12 +46,12 @@ main{
     background: linear-gradient(to right,red,orange,yellow,green,blue,purple);
 }
 .container{
-    row-gap: 15px;
+    row-gap: 5px;
 }
 .carrousel{
     @include flex(none, center, center, none, none);
     margin: auto;
-    margin-top: 25px;
+    margin-bottom: 25px;
     padding: 5px;
     max-width: 1000px;
     width: 95%;
@@ -59,14 +60,11 @@ main{
     scroll-snap-type: x mandatory;
     box-shadow: rgb(38, 57, 77) 0px 20px 30px -10px;
     border-radius: 9px;
-        h4{
-            text-align: center;
-        }
         img{
         width: 100%;
         object-fit: cover;
         scroll-snap-align: center;
-        padding: 5px;
+        padding: 3px;
         }
         a{
             display: flex;

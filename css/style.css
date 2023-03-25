@@ -7,7 +7,6 @@
 
 /*font-family: 'Poppins', sans-serif;
 font-family: 'Noticia Text', serif;
-colors: #F2F1F0 #5C468C
  */
 body header {
   background-color: #383838;
@@ -52,7 +51,7 @@ nav #toggle, nav label {
   border-radius: 50%;
   padding: 4px; }
   .logo:hover {
-    transform: scale(1.2); }
+    transform: scale(1.3); }
 
 body::-webkit-scrollbar {
   width: 7px; }
@@ -84,9 +83,10 @@ main {
     margin: 20px; }
   main h4 {
     font-family: "Poppins", sans-serif;
-    font-size: 18px;
+    font-size: 22px;
     text-align: center;
-    padding-bottom: 20px; }
+    padding-bottom: 20px;
+    margin-top: 50px; }
 
 .banner-index {
   background-image: url("../assets/imagenes/lgbtq.jpg");
@@ -103,7 +103,7 @@ main {
   background: linear-gradient(to right, red, orange, yellow, green, blue, purple); }
 
 .container {
-  row-gap: 15px; }
+  row-gap: 5px; }
 
 .carrousel {
   display: flex;
@@ -113,7 +113,7 @@ main {
   flex-wrap: none;
   gap: none;
   margin: auto;
-  margin-top: 25px;
+  margin-bottom: 25px;
   padding: 5px;
   max-width: 1000px;
   width: 95%;
@@ -122,13 +122,11 @@ main {
   scroll-snap-type: x mandatory;
   box-shadow: #26394d 0px 20px 30px -10px;
   border-radius: 9px; }
-  .carrousel h4 {
-    text-align: center; }
   .carrousel img {
     width: 100%;
     object-fit: cover;
     scroll-snap-align: center;
-    padding: 5px; }
+    padding: 3px; }
   .carrousel a {
     display: flex;
     flex-direction: row;
@@ -227,7 +225,7 @@ main p {
   background-image: url("../assets/imagenes/beso.jpg"); }
 
 .banner-trans {
-  background-image: url("../assets/imagenes/they3.jpg"); }
+  background-image: url("../assets/imagenes/they.jpg"); }
 
 .banner-ingles {
   background-image: url("../assets/imagenes/libros.jpg"); }
@@ -470,6 +468,8 @@ footer .logo {
     font-size: 16px; }
   main h3 {
     font-size: 21px; }
+  main h4 {
+    font-size: 20px; }
   main p {
     font-size: 14px; }
   nav .menu {
@@ -489,6 +489,8 @@ footer .logo {
     background-size: 100% 100%;
     height: 300px;
     padding: 2px; }
+  .carrousel {
+    height: 200px; }
   .cover {
     width: 115px;
     height: 135px;
@@ -551,6 +553,8 @@ footer .logo {
     background-size: 100% 100%;
     height: 200px;
     padding: 2px; }
+  .carrousel {
+    height: 170px; }
   .banner-les, .banner-gay, .banner-trans, .banner-ingles {
     background-size: 100% 100%;
     height: 200px;
