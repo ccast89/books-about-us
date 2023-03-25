@@ -157,9 +157,6 @@ main p {
   text-align: justify;
   font-size: 16px; }
 
-main h2 {
-  font-size: 25px; }
-
 .banner-les, .banner-gay, .banner-trans, .banner-ingles {
   background-image: url("../assets/imagenes/mujeres.jpg");
   background-size: 100% 100%;
