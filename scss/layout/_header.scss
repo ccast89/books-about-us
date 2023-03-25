@@ -11,6 +11,7 @@ body{
             nav{
                 @include flex(none, space-between, center, wrap, none);
                 padding: 1rem 1.5rem;
+                }
                 ul{
                     list-style: none;
                     display: flex;
@@ -18,15 +19,22 @@ body{
                     li{
                         a{
                             text-decoration: none;
-                            color: #F2F1F0;
+                            color: white;
                             font-family: $fuente-texto;
                             font-size: 18px;
+                            &:hover{
+                                font-size: 20px;
+                                color: black;
+                                padding: 2px;
+                                background-color: whitesmoke;
+                                padding: 4px;
+                                border-radius: 5%;
+                            }
                         }
                     }
-                }
             }
-        }
     }
+}
 
 nav #toggle, nav label{
     display: none;
@@ -37,6 +45,9 @@ nav #toggle, nav label{
     height: 80px;
     border-radius: 50%;
     padding: 4px;
+    &:hover{
+        transform: scale(1.2);
+    }
 }
 body::-webkit-scrollbar{
     width: 7px;

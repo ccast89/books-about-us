@@ -5,9 +5,16 @@
         }
         h2{
             font-size: 12px;
+            padding: 2px;
         }
         h3{
-            font-size: 17px;
+            font-size: 16px;
+        }
+        h5{
+            font-size: 14px;
+        }
+        p{
+            padding: 4px;
         }
     }
     .banner-index{
@@ -20,6 +27,49 @@
         height: 150px;
         padding: 2px;
     }
+    .banner-gay{
+        background-size: 100% 100%;
+        height: 150px;
+        padding: 2px;
+    }
+    .banner-trans{
+        background-size: 100% 100%;
+        height: 150px;
+        padding: 2px;
+    }
+    .banner-ingles{
+        background-size: 100% 100%;
+        height: 150px;
+        padding: 2px;
+    }
+    .card img{
+        width: 100px;
+        height: 120px;
+    }
+    .card-sinopsis-1{
+        font-size: 8px;
+        flex-direction: column-reverse;
+        overflow: auto;
+        h5{
+            font-size: 15px;
+        }
+        p{
+            font-size: 12px;
+        }
+    }
+    .card-sinopsis-2{
+        font-size: 8px;
+        flex-direction: column-reverse;
+        h5{
+            font-size: 15px;
+        }
+        p{
+            font-size: 12px;
+        }
+    }
+    .card a{
+        font-size: 9px;
+        }
     .grid-footer{
         display: flex;
         flex-direction: column;
